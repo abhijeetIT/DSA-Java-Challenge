@@ -33,17 +33,17 @@ https://leetcode.com/abhijeetIT
 
 ## 🗂️ Folder Structure
 DSA-Java/
-│
-├── Arrays/
-├── Strings/
-├── Hashing/
-├── LinkedList/
-├── Stack/
-├── Queue/
-├── Tree/
-├── DP/
-├── Graph/
-│
+│src/
+  ├── Arrays/ 
+  ├── Strings/
+  ├── Hashing/
+  ├── LinkedList/
+  ├── Stack/
+  ├── Queue/
+  ├── Tree/
+  ├── DP/
+  ├── Graph/
+│-.gitignore
 └── README.md
 
 
