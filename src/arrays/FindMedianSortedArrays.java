@@ -23,7 +23,7 @@ public class FindMedianSortedArrays {
             int left2 = (cut2 == 0) ? Integer.MIN_VALUE : nums2[cut2 - 1];
             int right2 = (cut2 == n) ? Integer.MAX_VALUE : nums2[cut2];
 
-            // Correct partition
+            // Correct partition.
             if (left1 <= right2 && left2 <= right1) {
 
                 // Odd length
