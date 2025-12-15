@@ -1,6 +1,5 @@
 package arrays;
 
-import javax.naming.PartialResultException;
 import java.util.Arrays;
 
 public class TwoSum {
