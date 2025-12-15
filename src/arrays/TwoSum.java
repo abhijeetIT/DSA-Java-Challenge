@@ -20,7 +20,7 @@ public class TwoSum {
         int target = 9;   //expected output -> [0,1]
         */
 
-        //test case 2.
+        //test case 2
         /* int[] nums = {3,2,4};
         int target = 6; // Output: [1,2]
         */
