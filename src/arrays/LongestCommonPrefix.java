@@ -1,13 +1,12 @@
 package arrays;
 
-import java.util.Arrays;
-
 //Day 2 problem essy 2 solving (15-12-2025)
 public class LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strings){
           if(strings == null || strings.length == 0){
               return "";
           }
+
           String first = strings[0];
 
           for(int i = 0 ; i < first.length() ; i++){
