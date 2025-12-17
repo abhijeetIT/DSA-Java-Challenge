@@ -1,4 +1,4 @@
-package arrays;
+package arrays.binarySearch;
 /*
 (day 4 (17-12-2025) -> https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
  */

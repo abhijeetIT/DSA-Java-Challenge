@@ -1,4 +1,4 @@
-package arrays;
+package arrays.LinearSearch;
 
 //Day 2 Problem 4 essy
 public class CountSquareSumTriples {

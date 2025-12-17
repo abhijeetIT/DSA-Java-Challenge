@@ -1,4 +1,4 @@
-package arrays;
+package arrays.binarySearch;
 
 public class BinarySearchAccendingDecending {
     static int binarySearchAccendingDecending(int[] nums,int target){

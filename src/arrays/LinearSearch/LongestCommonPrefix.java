@@ -1,4 +1,4 @@
-package arrays;
+package arrays.LinearSearch;
 
 //Day 2 problem essy 2 solving (15-12-2025)
 public class LongestCommonPrefix {
