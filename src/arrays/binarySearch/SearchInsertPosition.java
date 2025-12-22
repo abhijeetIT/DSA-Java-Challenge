@@ -7,7 +7,7 @@ public class SearchInsertPosition {
     public static int searchInsertPosition(int[] nums, int target) {
            int start =0 , end = nums.length-1;
 
-           //its same concept of celling of target
+           //it's same concept of celling of target
            while(start <= end){
                int mid = start+(end - start)/2;
 
