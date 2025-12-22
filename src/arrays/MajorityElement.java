@@ -9,7 +9,7 @@ public class MajorityElement {
         /*Boyer–Moore Voting Algorithm
         * Intuition (dimaag ka logic)
           Majority element itna zyada hota hai ki baaki sab elements milke bhi use cancel nahi kar paate
-        * */
+        */
           int count =0, ans = 0;
           for(int i = 0; i < arr.length ; i++){
               if(count == 0) {            //starting and jab count 0 hoga to ans me number add lr denge
