@@ -11,7 +11,7 @@ public class Three3Sum {
 
     static List<List<Integer>> three3Sum(int[] nums) {
 
-//Its a brute force solution it wants more modifications
+//It's a brute force solution it wants more modifications
         List<List<Integer>> returnValue = new ArrayList<>();
         int n = nums.length;
 
