@@ -1,7 +1,7 @@
 package arrays.binarySearch;
 
 /*
-Quetions(Day 7 20-12-2025)-> https://leetcode.com/problems/search-insert-position/description/?envType=problem-list-v2&envId=array
+Questions(Day 8 21-12-2025)-> https://leetcode.com/problems/search-insert-position/description/?envType=problem-list-v2&envId=array
  */
 public class SearchInsertPosition {
     public static int searchInsertPosition(int[] nums, int target) {
