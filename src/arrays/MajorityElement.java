@@ -14,18 +14,19 @@ public class MajorityElement {
           for(int i = 0; i < arr.length ; i++){
               if(count == 0) {            //starting and jab count 0 hoga to ans me number add lr denge
                   ans = arr[i];
+                  count=1;
               }
-              if(arr[i] == ans){
+              else if(arr[i] == ans){
                   count++;
               }else{
                   count--;
               }
           }
-          return count;
+          return ans;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,1,1,2,3,4,4,4,12,12,1};
+        int[] arr = {1,1,1,2,3,4,4,4,12,12};
 
         System.out.println(majorityElement(arr));
     }
