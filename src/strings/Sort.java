@@ -15,7 +15,6 @@ public class Sort {
         return new String(arr);
     }
 
-
     public static void main(String[] args) {
         System.out.println("The Sorted array.");
         String str = "dcba";
