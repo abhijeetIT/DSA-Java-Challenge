@@ -1,4 +1,7 @@
 package arrays;
+
+import java.util.Arrays;
+
 //https://leetcode.com/problems/rotate-array/description/
 public class RotateArrayK {
 
@@ -21,7 +24,11 @@ public class RotateArrayK {
         int k = 3;
         k=k%nums.length;
 
-        reverse(nums);
+        reverse(nums,0,nums.length-1);
+        reverse(nums,0,k-1);
+        reverse(nums,k,nums.length-1);
+
+        System.out.println(Arrays.toString(nums));
 
     }
 }
