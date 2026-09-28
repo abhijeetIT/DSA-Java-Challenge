@@ -9,11 +9,11 @@ public class RotateArrayK {
         while(start < end){
 
             int temp = nums[start];
-            nums[start]-=nums[end];
-            nums[end]=start;
+            nums[start]=nums[end];
+            nums[end]=temp;
 
             start++;
-            end++;
+            end--;
         }
     }
 
