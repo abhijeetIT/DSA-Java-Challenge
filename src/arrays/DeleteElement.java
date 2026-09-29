@@ -10,7 +10,7 @@ public class DeleteElement {
             return currentSize;
         }
 
-        // Shift elements to the left (In-place)
+        // Shift elements to the left (In place)
         for (int i = deletePosition; i < currentSize - 1; i++) {
             arr[i] = arr[i + 1];
         }
