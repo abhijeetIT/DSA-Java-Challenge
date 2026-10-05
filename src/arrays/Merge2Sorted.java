@@ -20,7 +20,7 @@ public class Merge2Sorted {
             }
         }
 
-        //if arr1 remain element
+        //if arr1 have remaining element
         while(acceding < arr1.length){
             mergeArray[k++]=arr1[acceding++];
         }
