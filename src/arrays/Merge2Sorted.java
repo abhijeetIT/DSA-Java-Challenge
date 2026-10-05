@@ -23,6 +23,8 @@ public class Merge2Sorted {
         while(acceding < arr1.length){
             mergeArray[k++]=arr1[acceding++];
         }
+
+        //if arr2 remain
         while( descending >= 0){
             mergeArray[k++]=arr2[descending--];
         }
