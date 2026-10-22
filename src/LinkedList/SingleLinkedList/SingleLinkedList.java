@@ -81,17 +81,43 @@ public class SingleLinkedList {
         System.out.println("deleted successfully.");
     }
 
+    public void removeDuplicates(){
+        if (head == null){
+            System.out.println("List is empty.");
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null){ // 1 2 2 3 4 4
+            if (temp.data == temp.next.data){
+                temp.next = temp.next.next;
+            }else {
+                temp = temp.next;
+            }
+        }
+        System.out.println("Duplicates Removed..");
+    }
+
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
 
         list.insert(10);
+        list.insert(10);
+        list.insert(10);
         list.insert(20);
+        list.insert(20);
+        list.insert(20);
+        list.insert(30);
+        list.insert(30);
         list.insert(30);
         list.insert(40);
         list.insert(50);
-        list.print();
-        list.delete(3);
-        list.print();
-    }
+        list.insert(50);
+        list.insert(50);
 
+        list.print();
+        list.removeDuplicates();
+        list.print();
+
+    }
 }
