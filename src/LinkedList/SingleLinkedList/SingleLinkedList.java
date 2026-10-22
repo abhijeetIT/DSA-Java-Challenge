@@ -43,13 +43,31 @@ public class SingleLinkedList {
         System.out.println();
     }
 
+    public int size(){
+        if (head == null){
+            return 0;
+        }
+
+        Node temp = head;
+        int count=0;
+        while(temp != null){
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
+    public void delete(){
+
+    }
+
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
 
         list.insert(10);
-        list.print();
         list.insert(20);
         list.print();
+        System.out.println(list.size());
     }
 
 }
