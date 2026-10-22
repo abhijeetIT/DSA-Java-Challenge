@@ -57,8 +57,28 @@ public class SingleLinkedList {
         return count;
     }
 
-    public void delete(){
+    public void delete(int pos){
+        if (head == null){
+            System.out.println("List is empty.");
+            return;
+        }
+        int size = size();
 
+        if (pos < 1 || pos > size){
+            System.out.println("Invalid position..");
+            return;
+        }
+
+        if (pos == 1){
+            head = head.next;
+        }else{
+            Node previous = head;
+            for (int i = 2 ; i < pos ; i++){
+                previous = previous.next;
+            }
+            previous.next = previous.next.next;
+        }
+        System.out.println("deleted successfully.");
     }
 
     public static void main(String[] args) {
@@ -66,8 +86,12 @@ public class SingleLinkedList {
 
         list.insert(10);
         list.insert(20);
+        list.insert(30);
+        list.insert(40);
+        list.insert(50);
         list.print();
-        System.out.println(list.size());
+        list.delete(3);
+        list.print();
     }
 
 }
