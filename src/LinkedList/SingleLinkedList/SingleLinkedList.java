@@ -22,9 +22,10 @@ public class SingleLinkedList {
         }
 
         Node temp = head;
-        while(temp.next == null){
-            temp.next=node;
+        while(temp.next != null){
+            temp=temp.next;
         }
+        temp.next=node;
     }
 
     public void print(){
