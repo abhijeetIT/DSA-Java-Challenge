@@ -21,10 +21,10 @@ public class SingleLinkedList {
             return;
         }
 
-//        Node temp = head;
-//        while(){
-//
-//        }
+        Node temp = head;
+        while(temp.next == null){
+            temp.next=node;
+        }
     }
 
     public void print(){
