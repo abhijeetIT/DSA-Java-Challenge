@@ -49,6 +49,8 @@ public class SingleLinkedList {
 
         list.insert(10);
         list.print();
+        list.insert(20);
+        list.print();
     }
 
 }
