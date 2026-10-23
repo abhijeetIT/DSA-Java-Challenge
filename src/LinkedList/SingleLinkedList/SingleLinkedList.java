@@ -1,6 +1,9 @@
 package LinkedList.SingleLinkedList;
 
 
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 class Node {
     int data;
     Node next;
@@ -100,24 +103,41 @@ public class SingleLinkedList {
 
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
+        Scanner scanner = new Scanner(System.in);
+        int input;
+        do{
+            System.out.println("================MENU=================");
+            System.out.println("0. Exit");
+            System.out.println("1. Inset");
+            System.out.println("2. Print");
+            System.out.println("3. Delete");
+            System.out.println("4. Remove Duplicate");
+            System.out.println("===================================");
 
-        list.insert(10);
-        list.insert(10);
-        list.insert(10);
-        list.insert(20);
-        list.insert(20);
-        list.insert(20);
-        list.insert(30);
-        list.insert(30);
-        list.insert(30);
-        list.insert(40);
-        list.insert(50);
-        list.insert(50);
-        list.insert(50);
+            System.out.print("Enter Your choose: ");
+            input = scanner.nextInt();
 
-        list.print();
-        list.removeDuplicates();
-        list.print();
+            switch (input){
+                case 0 :
+                    System.err.println("Exiting....");
+                    break;
+                case 1:
+                    System.out.print("Enter data to insert: ");
+                    list.insert(scanner.nextInt());
+                    break;
+                case 2:
+                     list.print();
+                     break;
+                case 3:
+                    System.out.println("Enter position to delete node : ");
+                    list.delete(scanner.nextInt());
+                    break;
+                case 4:
+                    list.removeDuplicates();
+                    break;
+                default:System.err.println("Invalid input...!!!\n");
+            }
 
+        } while(input != 0);
     }
 }
