@@ -1,7 +1,6 @@
 package LinkedList.SingleLinkedList;
 
 
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 class Node {
@@ -21,6 +20,7 @@ public class SingleLinkedList {
 
         if (head == null){
             head = node;
+            System.out.println("Data inserted Successfully..");
             return;
         }
 
@@ -29,6 +29,7 @@ public class SingleLinkedList {
             temp=temp.next;
         }
         temp.next=node;
+        System.out.println("Data inserted Successfully..");
     }
 
     public void print() {
@@ -101,6 +102,31 @@ public class SingleLinkedList {
         System.out.println("Duplicates Removed..");
     }
 
+    public void sort(){
+        if (head == null){
+            System.out.println("List is empty.");
+            return;
+        }
+
+        int size=size();
+
+        Node ptr1, ptr2;
+        for (int i = 0 ; i < size-1 ; i++){
+            ptr1=head;
+            ptr2=head.next;
+            for (int j=0 ; j < size-i-1 && ptr2 != null; j++) {
+                if (ptr1.data > ptr2.data){
+                    int temp = ptr1.data;
+                    ptr1.data = ptr2.data;
+                    ptr2.data = temp;
+                }
+                ptr1 = ptr2;
+                ptr2 = ptr2.next;
+            }
+        }
+        System.out.println("list sorted successfully..!!");
+    }
+
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
         Scanner scanner = new Scanner(System.in);
@@ -112,29 +138,27 @@ public class SingleLinkedList {
             System.out.println("2. Print");
             System.out.println("3. Delete");
             System.out.println("4. Remove Duplicate");
+            System.out.println("5. Sort");
             System.out.println("===================================");
 
             System.out.print("Enter Your choose: ");
             input = scanner.nextInt();
 
             switch (input){
-                case 0 :
-                    System.err.println("Exiting....");
-                    break;
-                case 1:
-                    System.out.print("Enter data to insert: ");
-                    list.insert(scanner.nextInt());
-                    break;
-                case 2:
-                     list.print();
-                     break;
-                case 3:
-                    System.out.println("Enter position to delete node : ");
-                    list.delete(scanner.nextInt());
-                    break;
-                case 4:
-                    list.removeDuplicates();
-                    break;
+                case 0 : System.err.println("Exiting....");
+                       break;
+                case 1: System.out.print("Enter data to insert: ");
+                       list.insert(scanner.nextInt());
+                       break;
+                case 2: list.print();
+                        break;
+                case 3: System.out.println("Enter position to delete node : ");
+                        list.delete(scanner.nextInt());
+                        break;
+                case 4: list.removeDuplicates();
+                        break;
+                case 5: list.sort();
+                        break;
                 default:System.err.println("Invalid input...!!!\n");
             }
 
