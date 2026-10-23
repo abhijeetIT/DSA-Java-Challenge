@@ -1,5 +1,6 @@
 package LinkedList.SingleLinkedList;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 class Node {
@@ -30,6 +31,7 @@ public class SingleLinkedList {
         System.out.println("==================================");
         return list;
     }
+
     public void insert(int data){
         Node node = new Node(data);
 
@@ -175,8 +177,55 @@ public class SingleLinkedList {
         ans.print();
     }
 
+    public static Node createCyclicList() {
+
+        Node node1 = new Node(10);
+        Node node2 = new Node(20);
+        Node node3 = new Node(30);
+        Node node4 = new Node(40);
+        Node node5 = new Node(50);
+
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+
+        // Create cycle
+        node5.next = node3;
+
+        return node1; // head
+    }
+
+    public static Boolean isLinklistCycle(Node head){
+        if (head == null){
+            System.out.println("list is empty..");
+            return false;
+        }
+
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
+
+        list.insert(10);
+        list.insert(50);
+        list.insert(10);
+        list.insert(50);
+
+        Node head = createCyclicList();
+
+        System.out.println(isLinklistCycle(head));
+        System.out.println(isLinklistCycle(list.head));
 
 
 
