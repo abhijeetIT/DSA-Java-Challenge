@@ -177,46 +177,84 @@ public class SingleLinkedList {
 
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
-        Scanner scanner = new Scanner(System.in);
-        int input;
-        do{
-            System.out.println("================MENU=================");
-            System.out.println("0. Exit");
-            System.out.println("1. Inset");
-            System.out.println("2. Print");
-            System.out.println("3. Delete");
-            System.out.println("4. Remove Duplicate");
-            System.out.println("5. Sort");
-            System.out.println("6. Merge");
-            System.out.println("===================================");
 
-            System.out.print("Enter Your choose: ");
-            input = scanner.nextInt();
 
-            switch (input){
-                case 0 : System.err.println("Exiting....");
-                       break;
-                case 1: System.out.print("Enter data to insert: ");
-                       list.insert(scanner.nextInt());
-                       break;
-                case 2: list.print();
-                        break;
-                case 3: System.out.println("Enter position to delete node : ");
-                        list.delete(scanner.nextInt());
-                        break;
-                case 4: list.removeDuplicates();
-                        break;
-                case 5: list.sort();
-                        break;
-                case 6:
-                    System.out.println("===========Enter 1st list details===========");
-                        SingleLinkedList list1 = createList();
-                    System.out.println("===========Enter 2nd list details===========");
-                        SingleLinkedList list2 = createList();
-                        merge(list1,list2);
-                        break;
-                default:System.err.println("Invalid input...!!!\n");
-            }
-        } while(input != 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        Scanner scanner = new Scanner(System.in);
+//        int input;
+//        do{
+//            System.out.println("================MENU=================");
+//            System.out.println("0. Exit");
+//            System.out.println("1. Inset");
+//            System.out.println("2. Print");
+//            System.out.println("3. Delete");
+//            System.out.println("4. Remove Duplicate");
+//            System.out.println("5. Sort");
+//            System.out.println("6. Merge");
+//            System.out.println("===================================");
+//
+//            System.out.print("Enter Your choose: ");
+//            input = scanner.nextInt();
+//
+//            switch (input){
+//                case 0 : System.err.println("Exiting....");
+//                       break;
+//                case 1: System.out.print("Enter data to insert: ");
+//                       list.insert(scanner.nextInt());
+//                       break;
+//                case 2: list.print();
+//                        break;
+//                case 3: System.out.println("Enter position to delete node : ");
+//                        list.delete(scanner.nextInt());
+//                        break;
+//                case 4: list.removeDuplicates();
+//                        break;
+//                case 5: list.sort();
+//                        break;
+//                case 6:
+//                    System.out.println("===========Enter 1st list details===========");
+//                        SingleLinkedList list1 = createList();
+//                    System.out.println("===========Enter 2nd list details===========");
+//                        SingleLinkedList list2 = createList();
+//                        merge(list1,list2);
+//                        break;
+//                default:System.err.println("Invalid input...!!!\n");
+//            }
+//        } while(input != 0);
     }
 }
