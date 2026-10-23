@@ -1,6 +1,5 @@
 package LinkedList.SingleLinkedList;
 
-
 import java.util.Scanner;
 
 class Node {
@@ -127,6 +126,23 @@ public class SingleLinkedList {
         System.out.println("list sorted successfully..!!");
     }
 
+    public SingleLinkedList merge(SingleLinkedList l1, SingleLinkedList l2){
+
+        if (l1.head == null || l2.head == null){
+            System.out.println("List is empty.");
+            return null;
+        }
+
+        Node l1Head = l1.head;
+        Node l2Head = l2.head;
+
+        SingleLinkedList ans = new SingleLinkedList();
+        while()
+
+
+        return ans;
+    }
+
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
         Scanner scanner = new Scanner(System.in);
@@ -159,6 +175,7 @@ public class SingleLinkedList {
                         break;
                 case 5: list.sort();
                         break;
+                case 6:
                 default:System.err.println("Invalid input...!!!\n");
             }
         } while(input != 0);
