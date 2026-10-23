@@ -161,7 +161,6 @@ public class SingleLinkedList {
                         break;
                 default:System.err.println("Invalid input...!!!\n");
             }
-
         } while(input != 0);
     }
 }
