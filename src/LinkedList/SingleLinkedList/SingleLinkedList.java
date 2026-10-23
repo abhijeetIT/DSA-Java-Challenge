@@ -14,12 +14,27 @@ class Node {
 public class SingleLinkedList {
     Node head;
 
+    public static SingleLinkedList createList(){
+        SingleLinkedList list = new SingleLinkedList();
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a length of list: ");
+        int n = sc.nextInt();
+
+        for (int i = 1 ; i <= n ; i++){
+            System.out.print("Enter data : ");
+            list.insert(sc.nextInt());
+        }
+        list.print();
+        System.out.println("==================================");
+        return list;
+    }
     public void insert(int data){
         Node node = new Node(data);
 
         if (head == null){
             head = node;
-            System.out.println("Data inserted Successfully..");
             return;
         }
 
@@ -28,7 +43,6 @@ public class SingleLinkedList {
             temp=temp.next;
         }
         temp.next=node;
-        System.out.println("Data inserted Successfully..");
     }
 
     public void print() {
@@ -126,21 +140,39 @@ public class SingleLinkedList {
         System.out.println("list sorted successfully..!!");
     }
 
-    public SingleLinkedList merge(SingleLinkedList l1, SingleLinkedList l2){
+    public static void merge(SingleLinkedList l1, SingleLinkedList l2){
 
         if (l1.head == null || l2.head == null){
             System.out.println("List is empty.");
-            return null;
+            return;
         }
 
         Node l1Head = l1.head;
         Node l2Head = l2.head;
 
         SingleLinkedList ans = new SingleLinkedList();
-        while()
+        while(l1Head != null && l2Head != null){
+            if (l1Head.data < l2Head.data){
+                ans.insert(l1Head.data);
+                l1Head = l1Head.next;
+            }else{
+                ans.insert(l2Head.data);
+                l2Head = l2Head.next;
+            }
+        }
 
+        while(l1Head != null){
+            ans.insert(l1Head.data);
+            l1Head = l1Head.next;
+        }
 
-        return ans;
+        while(l2Head != null){
+            ans.insert(l2Head.data);
+            l2Head = l2Head.next;
+        }
+
+        System.out.println("Merged successfully...");
+        ans.print();
     }
 
     public static void main(String[] args) {
@@ -155,6 +187,7 @@ public class SingleLinkedList {
             System.out.println("3. Delete");
             System.out.println("4. Remove Duplicate");
             System.out.println("5. Sort");
+            System.out.println("6. Merge");
             System.out.println("===================================");
 
             System.out.print("Enter Your choose: ");
@@ -176,6 +209,12 @@ public class SingleLinkedList {
                 case 5: list.sort();
                         break;
                 case 6:
+                    System.out.println("===========Enter 1st list details===========");
+                        SingleLinkedList list1 = createList();
+                    System.out.println("===========Enter 2nd list details===========");
+                        SingleLinkedList list2 = createList();
+                        merge(list1,list2);
+                        break;
                 default:System.err.println("Invalid input...!!!\n");
             }
         } while(input != 0);
