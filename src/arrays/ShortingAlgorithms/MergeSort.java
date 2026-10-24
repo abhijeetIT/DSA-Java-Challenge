@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void merge(int arr[], int startingIndex, int mid, int endingIndex){
-        int[] sortedMergeArray = new int[startingIndex+endingIndex+1];
+        int[] sortedMergeArray = new int[startingIndex-endingIndex+1];
 
         int index1 = startingIndex;
         int index2 = mid+1;
@@ -27,12 +27,15 @@ public class MergeSort {
             sortedMergeArray[sortedMergeArrayPointer++] = arr[index2++];
         }
 
-        System.out.println(Arrays.toString(sortedMergeArray));
+        for (int i = 0 , j = startingIndex; i < sortedMergeArray.length ; i++){
+            arr[j++] = sortedMergeArray[0];
+        }
     }
 
 
     public static void divide(int[] arr,int startingIndex, int endingIndex){
-        if (startingIndex > endingIndex){
+
+        if (startingIndex >= endingIndex){
             return;
         }
 
@@ -48,5 +51,8 @@ public class MergeSort {
         int[] arr = {7, 3, 8, 10, 4, 5, 1, 9, 2};
 
         divide(arr,0,arr.length-1);
+
+        System.out.println("After sort");
+        System.out.println(Arrays.toString(arr));
     }
 }
