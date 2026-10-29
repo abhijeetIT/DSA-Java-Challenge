@@ -41,9 +41,84 @@ public class DoubleLinkedList {
         return count;
     }
 
-    public
+    public void insert(int data){
+        Node node = new Node(data);
+
+        if (head==null){
+            head = node;
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp.next != null){
+            temp = temp.next;
+        }
+
+        node.previous = temp ;
+        temp.next = node;
+    }
+
+    public void insert(int data, int pos){
+
+        int size = size();
+
+        if (pos < 1 || pos > size+1) {
+            return;
+        }
+
+        Node node = new Node(data);
+        if (head==null){
+            head = node;
+            return;
+        }
+
+        if (pos > 1){
+            Node temp = head;
+
+            for ( int i = 1 ; i < pos ; i++){
+                temp = temp.next;
+            }
+
+            if (temp.next == null){
+                node.previous = temp;
+            }else{
+                node.previous = temp;
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //        Scanner scanner = new Scanner(System.in);
 //        int input;
 //        do{
