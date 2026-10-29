@@ -27,6 +27,21 @@ public class DoubleLinkedList {
         System.out.println();
     }
 
+
+    public int size(){
+        if (head == null){
+            return 0;
+        }
+
+        Node temp = head;
+        int count=0;
+        while(temp != null){
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
 
     }
