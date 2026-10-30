@@ -140,16 +140,45 @@ public class DoubleLinkedList {
         }
     }
 
+    public void sort(){
+        if (head == null || head.next == null){
+            return;
+        }
+
+        int size = size();
+
+        Node temp,temp2;
+        for (int i = 0 ; i < size-1 ; i++){
+            temp = head;
+            temp2 = head.next;
+
+            for (int j = 0 ; j < size-i-1 ; j++){
+                if (temp.data > temp2.data){
+                    int data = temp.data;
+                    temp.data = temp2.data;
+                    temp2.data = data;
+                }
+                temp = temp2;
+                temp2 = temp2.next;
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
 
         DoubleLinkedList dll = new DoubleLinkedList();
 
         dll.insert(10);
+        dll.insert(20,2);
+        dll.insert(1);
+        dll.insert(0);
+        dll.insert(100);
+        dll.insert(40);
 
         dll.print();
 
-        dll.insert(20,2);
+        dll.sort();
 
         dll.print();
 
