@@ -102,6 +102,45 @@ public class DoubleLinkedList {
         }
     }
 
+    public void delete(int pos) {
+
+        int size = size();
+
+        if (head == null || pos < 1 || pos > size) {
+            return;
+        }
+
+        // First node
+        if (pos == 1) {
+
+            if (head.next == null) {
+                head = null;
+            } else {
+                head = head.next;
+                head.previous = null;
+            }
+            return;
+        }
+
+        Node temp = head;
+
+        for (int i = 1; i < pos; i++) {
+            temp = temp.next;
+        }
+
+        // Last node
+        if (temp.next == null) {
+
+            temp.previous.next = null;
+
+        } else {
+
+            temp.previous.next = temp.next;
+            temp.next.previous = temp.previous;
+        }
+    }
+
+
     public static void main(String[] args) {
 
         DoubleLinkedList dll = new DoubleLinkedList();
@@ -110,7 +149,7 @@ public class DoubleLinkedList {
 
         dll.print();
 
-        dll.insert(10,2);
+        dll.insert(20,2);
 
         dll.print();
 
