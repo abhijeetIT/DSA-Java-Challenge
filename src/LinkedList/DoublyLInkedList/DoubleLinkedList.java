@@ -9,6 +9,7 @@ class Node {
         this.data = data;
     }
 }
+
 public class DoubleLinkedList {
     Node head;
 
@@ -102,20 +103,6 @@ public class DoubleLinkedList {
     }
 
     public static void main(String[] args) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
