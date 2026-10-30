@@ -104,7 +104,9 @@ public class DoubleLinkedList {
 
     public static void main(String[] args) {
 
+        DoubleLinkedList dll = new DoubleLinkedList();
 
+        dll.insert(10);
 
 
 
