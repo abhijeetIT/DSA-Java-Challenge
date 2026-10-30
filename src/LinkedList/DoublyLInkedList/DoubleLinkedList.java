@@ -110,7 +110,9 @@ public class DoubleLinkedList {
 
         dll.print();
 
+        dll.insert(10,2);
 
+        dll.print();
 
 
 
