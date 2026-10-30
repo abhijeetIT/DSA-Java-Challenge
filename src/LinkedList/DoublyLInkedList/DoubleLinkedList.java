@@ -108,6 +108,10 @@ public class DoubleLinkedList {
 
         dll.insert(10);
 
+        dll.print();
+
+
+
 
 
 
