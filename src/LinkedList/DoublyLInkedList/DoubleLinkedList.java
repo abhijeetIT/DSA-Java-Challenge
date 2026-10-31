@@ -190,7 +190,6 @@ public class DoubleLinkedList {
 
 
 
-
 //        Scanner scanner = new Scanner(System.in);
 //        int input;
 //        do{

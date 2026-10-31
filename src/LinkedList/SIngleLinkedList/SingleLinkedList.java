@@ -106,7 +106,7 @@ public class SingleLinkedList {
         }
 
         Node temp = head;
-        while (temp.next != null){ // 1 2 2 3 4 4
+        while (temp.next != null){
             if (temp.data == temp.next.data){
                 temp.next = temp.next.next;
             }else {
