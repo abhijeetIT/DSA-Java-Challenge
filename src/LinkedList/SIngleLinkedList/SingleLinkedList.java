@@ -213,18 +213,39 @@ public class SingleLinkedList {
         return false;
     }
 
+    public void reverse(){
+        if (size() < 2){
+            return;
+        }
+
+        Node prev = null;
+        Node present = head;
+        Node next = present.next;
+
+        while(present != null){
+            present.next = prev;
+            prev = present;
+            present = next;
+
+            if (next != null){
+                next = next.next;
+            }
+        }
+        head = prev;
+    }
+
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
 
         list.insert(10);
-        list.insert(50);
-        list.insert(10);
-        list.insert(50);
+        list.insert(20);
+        list.insert(30);
+        list.insert(40);
 
-        Node head = createCyclicList();
+        list.reverse();
 
-        System.out.println(isLinklistCycle(head));
-        System.out.println(isLinklistCycle(list.head));
+        list.print();
+
 
 
 
