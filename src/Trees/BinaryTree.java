@@ -13,4 +13,5 @@ class Node {
 }
 
 public class BinaryTree {
+    Node root;
 }
