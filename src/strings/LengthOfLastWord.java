@@ -3,12 +3,12 @@ package strings;
 // LeetCode question -> https://leetcode.com/problems/length-of-last-word/description/
 
 public class LengthOfLastWord {
-
     public static int lengthOfLastWord(String s){
 
         if (s.isEmpty()){
             return -1;
         }
+
         int i = s.length()-1;
         int length = 0;
 
