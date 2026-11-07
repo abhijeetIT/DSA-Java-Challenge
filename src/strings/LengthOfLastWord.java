@@ -9,19 +9,19 @@ public class LengthOfLastWord {
         if (s.isEmpty()){
             return -1;
         }
-        int i = s.length()-1, length = 0;
+        int i = s.length()-1;
+        int length = 0;
 
         while(i >= 0 && s.charAt(i) == ' '){
-            i++;
+            i--;
         }
 
         while(i >= 0 && s.charAt(i) != ' '){
             length++;
-            i++;
+            i--;
         }
         return length;
     }
-
 
     public static void main(String[] args) {
 
