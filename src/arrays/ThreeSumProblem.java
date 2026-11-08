@@ -10,7 +10,7 @@ public class ThreeSumProblem {
     public static List<List<Integer>> threeSum(int[] nums) {
 
         if (nums.length < 3){
-            return null;
+            return new ArrayList<>();
         }
 
         List<List<Integer>> returnValue = new ArrayList<>();
@@ -20,7 +20,7 @@ public class ThreeSumProblem {
                 for (int k = j+1 ; k < nums.length ; k++){
                     int sum = nums[i]+nums[j]+nums[k];
                     if (sum == 0){
-                        returnValue.add(Arrays.asList(i,j,k));
+                        returnValue.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     }
                 }
             }
