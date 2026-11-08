@@ -50,6 +50,8 @@ public class ThreeSumProblem {
 
         for (int i = 0 ; i < nums.length ; i++){
 
+            if(i > 0 && nums[i] == nums[i-1]) continue;
+
             int left = i+1;
             int right = nums.length-1;
 
@@ -57,10 +59,22 @@ public class ThreeSumProblem {
                 int sum = nums[i] + nums[left] + nums[right];
 
                 if (sum == 0){
-                    List<Integer> ans = Arrays.asList(nums[i],nums[left],nums[right]);
-                    returnValue.add(ans);
-                }else if (sum > 0){
+                    returnValue.add(Arrays.asList(nums[i], nums[left], nums[right]));
 
+                    while(nums[right] == nums[right-1]){
+                        right--;
+                    }
+
+                    while (nums[left] == nums[left+1]){
+                        left++;
+                    }
+                    left++;
+                    right--;
+
+                }else if (sum > 0){
+                    right--;
+                }else{
+                    left++;
                 }
             }
         }
