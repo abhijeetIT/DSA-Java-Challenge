@@ -37,7 +37,7 @@ public class Three3Sum {
                 } else if (sum < 0){
                     left++;
                 } else {
-                    right--;   // ✅ yahan fix
+                    right--;
                 }
             }
         }

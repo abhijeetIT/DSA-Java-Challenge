@@ -64,7 +64,6 @@ public class ThreeSumProblem {
                     while(nums[right] == nums[right-1]){
                         right--;
                     }
-
                     while (nums[left] == nums[left+1]){
                         left++;
                     }
