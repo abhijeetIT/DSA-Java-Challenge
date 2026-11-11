@@ -45,7 +45,7 @@ public class Three3Sum {
 
 //It's a brute force solution it wants more modifications
 //        for (int i = 0; i < n - 2; i++) {
-//            for (int j = i + 1; j < n - 1; j++) {   // ✅ FIX
+//            for (int j = i + 1; j < n - 1; j++) {
 //                for (int k = j + 1; k < n; k++) {
 //
 //                    if (nums[i] + nums[j] + nums[k] == 0) {
