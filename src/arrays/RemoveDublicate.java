@@ -3,7 +3,7 @@ package arrays;
 import java.util.Arrays;
 
 /*
-Question (Day 5 problem 1 essy) - https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=problem-list-v2&envId=array
+Question (Day 5 problem 1 essay) - https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=problem-list-v2&envId=array
  */
 public class RemoveDublicate {
 
